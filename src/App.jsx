@@ -12,6 +12,7 @@ function App() {
 
     const data = await response.json()
 
+    console.log(response.status) // Show query response message
     console.log(data)
 
     setSearchedCity(city)
@@ -30,7 +31,7 @@ function App() {
 
       <button onClick={handleSearch}>Search</button>
 
-      {searchedCity && <p>City: {searchedCity}</p>}
+      {searchedCity && <p>Location: {searchedCity}</p>}
     </div>
   );
 }
